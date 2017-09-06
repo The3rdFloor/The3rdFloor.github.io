@@ -19,6 +19,8 @@ communities, as well as to identify pathways in various environments.
 ***
 Coming soon...
 
+
+### Website built with...
 This website is built with [Jekyll][jekyll-organization]. The theme has been adapted from [minima][minima-github].
 
 You can find the source code for Minima at GitHub:
