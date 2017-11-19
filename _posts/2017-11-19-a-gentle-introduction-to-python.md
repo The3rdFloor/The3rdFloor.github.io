@@ -168,6 +168,7 @@ comments.
 ___
 # Part 2: Building an ORF Finder
 
+![Image of Phi X Phage, sequenced by Sanger in 1974](/assets/phi_x_phage.jpg)
 
 ___
 # Further Reading
