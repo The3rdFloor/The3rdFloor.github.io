@@ -431,7 +431,61 @@ while ( position < len(phi_genome)-2 ):
 This is looking better, but there are a few problems that stand out from
 glancing through the output. Many of these putative open reading frames 
 seem very short, which makes them a little unbelievable as candidates
-for proteins. 
+for proteins. To account for this, we will start by only keeping track
+of putative ORFs that are sufficiently long. After each STOP codon, we
+will reset the length counter and start counting a new ORF. The code
+should look something like this:
+
+{% highlight python %}
+stop_codons = ["TAG", "TAA", "TGA"]
+position = 0
+orf_length = 0
+
+while ( position < len(phi_genome)-2 ):
+	codon = phi_genome[position:(position+3)]
+	if codon in stop_codons:
+		print(codon + "----> STOP")
+		if ( orf_length > 100 ):
+			print("----------LONG ORF----------")
+		orf_length = 0		# Reset the ORF length, we are done with the current frame
+	else:
+		print(codon)
+		orf_length = orf_length + 3
+	position = position + 3
+{% endhighlight %}
+
+This code will print out a message whenever it gets to an ORF that is 
+more than 100 nucleotides long. These new ORFs are looking a little 
+better, but the output is still cluddered and we still have to read over
+the input by hand to find them. On top of it, the codons are all printed
+individually, which may not be the best way to look at them. We will now
+change our code to collect the codons into one string, and print out
+the string on a single line, only if it is sufficiently long!
+
+{% highlight python %}
+stop_codons = ["TAG", "TAA", "TGA"]
+position = 0
+orf_length = 0
+orf_sequence = ""	# Create an initial empty string
+
+while ( position < len(phi_genome)-2 ):
+	codon = phi_genome[position:(position+3)]
+	if codon in stop_codons:
+		if ( orf_length > 100 ):
+			print("")		# Print a blank line to make things easier to read
+			print(">a_long_orf")	# We can even print the sequence with a FASTA header
+			print(orf_sequence)
+		orf_length = 0		# Reset the ORF length, we are done with the current frame
+		orf_sequence = ""	# We also need to reset the sequence now
+	else:
+		orf_sequence = orf_sequence + codon
+		orf_length = orf_length + 3
+	position = position + 3
+{% endhighlight %}
+
+Finally, we can now copy these sequences into a program like BLAST's [blastx][blastx-link]
+to see if we find anything of interest. With a bit of luck, we should 
+get some good hits, which may confirm that we have indeed found a real ORF!
 
 ___
 # Exercises and Challenges for Practice
@@ -449,3 +503,4 @@ ___
 [python-dict]: https://www.tutorialspoint.com/python/python_dictionary.htm
 [1-letter-code]: http://www.fao.org/docrep/004/Y2775E/y2775e0e.htm
 [file-io]: https://docs.python.org/3.5/tutorial/inputoutput.html#reading-and-writing-files
+[blastx-link]: https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastx&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome
