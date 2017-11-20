@@ -336,7 +336,7 @@ organism to be sequenced (in 1974 by Sanger et al.)
 
 ![Image of Phi X Phage, sequenced by Sanger in 1974](/assets/phi_x_phage.jpg)
 
-(Image courtesy of Dr. Doxey)
+(Source: https://en.wikipedia.org/wiki/Phi_X_174#/media/File:PhiX174.jpg)
 
 I would now like to introduce you to its genome:
 
@@ -487,16 +487,40 @@ Finally, we can now copy these sequences into a program like BLAST's [blastx][bl
 to see if we find anything of interest. With a bit of luck, we should 
 get some good hits, which may confirm that we have indeed found a real ORF!
 
+This concludes the tutorial, but there is still plenty to do an learn.
+We have barely scratched the surface of what Python is capable of! Below
+are a few exercises and idea to practice. Look at the 'Further Reading'
+section below to get some help with the exercises. 
+
+Finally, I have included a more complete ORF finder that implements some
+of the below exercises and uses a few new ideas. This file is commented
+extensively, so feel free to look through it. It introduces quite a few
+new ideas, such as classes, functions, and more. This code can be 
+downloaded [here](/assets/orf_finder.py).
+
 ___
 # Exercises and Challenges for Practice
 - Add the ability to find start codons
 - Print out the amino acid sequence of an ORF (Hint: Read up on [dictionaries][python-dict]
 and see if you can use them to store codons and their respective [1-letter code][1-letter-code])
 - Add the ability to search all 6 reading frames
-- Make the ORF finder treat the genome like it's cyclic
+- Make the ORF finder work for circular chromosomes 
 
 ___
 # Further Reading
+- [The Hitchhiker's Guide to Python][hitchhiker-link] is an excellent resource with many great tutorials!
+- [Rosalind][rosalind-link] has a series of fantastic problems for learning bioinformatics programming.
+You can use any language you like, but Python works quite well for this, and it has a few extra Python
+resources.
+- [This][doxey-tutorial] is Dr. Doxey's tutorial. It is quite similar to the one we have just gone
+over, but feel free to read through it as well.
+- [LearnPython.org][learn-python-org]
+- [Stack overflow][stackoverflow-link], I cannot overstate how often I have used this site. It is
+a question board, but almost any question you can imagine has been answered on it.
+- [Tutorialspoint][tutorialpoint-link] has some good tutorials on Python. There are tutorials for 
+other languages as well, including R, another useful language in bioinformatics.
+- [Code Academy][code-acad-link] has some pretty good tutorials on getting started with things, 
+though it can hold your hand a little excessively at times, still not a bad resource!
 
 [online-env-1]: https://repl.it/languages/python3
 [online-env-2]: https://www.tutorialspoint.com/execute_python_online.php
@@ -504,3 +528,11 @@ ___
 [1-letter-code]: http://www.fao.org/docrep/004/Y2775E/y2775e0e.htm
 [file-io]: https://docs.python.org/3.5/tutorial/inputoutput.html#reading-and-writing-files
 [blastx-link]: https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastx&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome
+[hitchhiker-link]: http://docs.python-guide.org/en/latest/intro/learning/
+[rosalind-link]: http://rosalind.info/problems/locations/
+[doxey-tutorial]: http://doxey.uwaterloo.ca/tutorials/Python.html
+[learn-python-org]: http://www.learnpython.org/
+[stackoverflow-link]: https://stackoverflow.com/
+[tutorialpoint-link]: https://www.tutorialspoint.com/python3/index.htm
+[code-acad-link]: https://www.codecademy.com/
+
