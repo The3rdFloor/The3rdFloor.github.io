@@ -2,7 +2,7 @@
 layout: post
 title: "A Gentle Introduction To Python"
 date: 2017-11-19 10:00 -0500
-categories: 
+categories: programming tutorials python
 ---
 
 This post is a tutorial that will go from a basic introduction to
