@@ -15,6 +15,7 @@ scientific hypotheses and to make predictions to be tested in labs.
 ### Degrees
 ***
 2019 Master of Science in Biology, University of Waterloo
+
 2017 Bachelor of Computer Science in Bioinformatics, University of Waterloo
 
 ### Publications
