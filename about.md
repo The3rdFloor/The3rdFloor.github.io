@@ -5,14 +5,16 @@ permalink: /about/
 ---
 
 The purpose of this blog is to discuss the field of bioinformatics, and specifically, to discuss its applications
-in microbial ecology.
+in microbial ecology. In future, I would also like to use it to document my beer tour through Vienna to learn about
+the wonderful lagers that Austria is home to.
 
-I am a masters student with the Hug Research Group at the University of Waterloo. My area of research is
-in metagenomics, and the application of bioinformatics tools to study the interactions of microbes in their
-communities, as well as to identify pathways in various environments.
+I am currently a PhD student with the Archaea Biology and Ecogenomics Division at the University of Vienna. My area
+of research is in bioinformatics with a focus on metagenomics. I am interested exploiting sequence data to inform 
+scientific hypotheses and to make predictions to be tested in labs. 
 
-### Degree
+### Degrees
 ***
+2019 Master of Science in Biology, University of Waterloo
 2017 Bachelor of Computer Science in Bioinformatics, University of Waterloo
 
 ### Publications
