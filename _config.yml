@@ -14,6 +14,9 @@
 # remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "dark" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
+# GitHub stuff
+github: [metadata]
+
 # Site Settings
 locale                   : "en-US"
 title                    : "The 3rd Floor"

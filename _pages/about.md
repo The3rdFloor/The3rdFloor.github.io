@@ -1,5 +1,5 @@
 ---
-permalink: /about
+permalink: /about/
 layout: single
 classes: wide
 author_profile: true
