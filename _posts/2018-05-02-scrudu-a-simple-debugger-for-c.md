@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title: "Scrúdú: A Simple Debugger for C"
 date: 2018-05-02 10:00 -0500
 categories: programming tutorials debugging

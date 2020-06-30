@@ -1,0 +1,21 @@
+# /_data/authors.yml
+
+Angus Hilts:
+    name        : "Angus Hilts"
+    avatar      : "assets/images/angus_avatar.jpg"
+    bio         : "A bioinformatician with a passion for making (and drinking) beer!"
+    location    : "Vienna, Austria"
+    email       : "angus.hilts@univie.ac.at"
+    links:
+        - label: "Email"
+          icon: "fas fa-fw fa-envelope-square"
+          url: "mailto:angus.hilts@univie.ac.at"
+        - label: "Website"
+          url: "the3rdfloor.ca"
+          icon: "fas fa-fw fa-link"
+        - label: "GitHub"
+          icon: "fab fa-fw fa-github"
+          url: "https://github.com/Gr1m3y"
+        - label: "Instagram"
+          icon: "fab fa-fw fa-instagram"
+          url: "https://instagram.com/grimeyjr"

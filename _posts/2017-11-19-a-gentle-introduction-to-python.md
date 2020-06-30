@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "A Gentle Introduction To Python"
 date: 2017-11-19 10:00 -0500
 categories: programming tutorials python
@@ -374,7 +374,7 @@ ___
 I would like to introduce you to ΦX174 (Phi X 174), a bacteriophage and the first DNA based 
 organism to be sequenced (Sanger et al., 1974)
 
-![Image of Phi X Phage, sequenced by Sanger in 1974](/assets/phi_x_phage.jpg)
+![Image of Phi X Phage, sequenced by Sanger in 1974](/assets/images/phi_x_phage.jpg)
 
 ([Image source][phi-x-image])
 
@@ -397,7 +397,7 @@ phi_genome = "GAGTTTTATCGCTTCCATGACGCAGAAGTTAACACTTTCGGATATTTCTGATGAGTCGAAAAATTA
 {% endhighlight %}
 
 If you do want to try this using file I/O, or just to make a copy
-and paste easier, the fasta file is available [here](/assets/phi-x-genome.fasta).
+and paste easier, the fasta file is available [here](/assets/data/phi-x-genome.fasta).
 
 Now that we have a sequence in place, let's plan out our program. It is
 always a good idea to think about your problem before you even sit down
@@ -418,7 +418,7 @@ since it starts with a start codon and ends with a stop codon.
 The second frame would start at the first `T` and the
 third at the first `G`.  
 
-![Open reading frame illustration](/assets/open_reading_frame.png)
+![Open reading frame illustration](/assets/images/open_reading_frame.png)
 
 Finding an ORF can be a relatively complex task, since we have to 
 consider both the forward and reverse strand of DNA, we have to consider
@@ -437,7 +437,7 @@ at a time and slides along the entire genome. To further simplify this,
 we are just going to look for the first sequence, and we won't bother
 looking for the start codon, just the stop codon. 
 
-![Illustration of a sliding window to find codons](/assets/orf_gif.gif)
+![Illustration of a sliding window to find codons](/assets/images/orf_gif.gif)
 
 This image should clarify the conceptual idea of the the sliding window.
 The first part that we will implement is the sliding part. To do this, 
@@ -556,7 +556,7 @@ get some good hits, which may confirm that we have indeed found a real ORF!
 If your sequence doesn't find anything, try copying another to see if 
 it gives you any results.
 
-![BLAST summary](/assets/phi_x_blast_summary.png)
+![BLAST summary](/assets/images/phi_x_blast_summary.png)
 
 Bingo! Looks like there are quite a few good hits! The best scoring hit
 is below, and it looks like quite a good alignment too (99% identical,
@@ -564,7 +564,7 @@ doesn't get much better than that!)
 
 <br>
 
-![Top BLAST result](/assets/phi_x_blast_hit.png)
+![Top BLAST result](/assets/images/phi_x_blast_hit.png)
 
 <br>
 
@@ -577,7 +577,7 @@ Finally, I have included a more complete ORF finder that implements some
 of the below exercises and uses a few new ideas. This file is commented
 extensively, so feel free to look through it. It introduces quite a few
 new ideas, such as classes, functions, and more. This code can be 
-downloaded [here](/assets/orf_finder.py).
+downloaded [here](/assets/images/orf_finder.py).
 
 I hope you found this tutorial beneficial and that it has helped to whet
 your appetite for coding! If you have any comments or questions, be sure
