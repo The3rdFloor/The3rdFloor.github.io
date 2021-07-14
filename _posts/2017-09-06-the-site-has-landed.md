@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: archive
 title: "The Site Has Landed"
 date: 2017-09-06 10:59 -0500
 categories: update introduction
