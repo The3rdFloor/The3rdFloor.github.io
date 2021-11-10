@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: posts
 title: "A Gentle Introduction To Python"
 date: 2017-11-19 10:00 -0500
 categories: programming tutorials python
